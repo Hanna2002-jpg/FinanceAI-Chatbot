@@ -1,142 +1,131 @@
-🧠 FinanceAI Chatbot
+# 💬 FinanceAI Chatbot
 
-FinanceAI Chatbot is an AI-powered conversational web app that provides financial guidance, handles user queries, and enables handoff to human support agents.
-Built using React + TypeScript + Tailwind CSS + Vite, it’s designed for speed, modularity, and a clean chat UI.
+FinanceAI Chatbot is an intelligent conversational assistant built using **React + TypeScript + TailwindCSS**.  
+It helps users interact with a finance-related AI system, fill forms, and manage queries seamlessly.  
+The chatbot includes **Google Sheets integration** to automatically log user form submissions and interactions.
 
-🚀 Features
+---
 
-💬 Real-time AI-powered financial chat
+## 🚀 Features
 
-🧾 Smart handoff form for support escalation
+- 💡 Interactive chat interface with AI-generated responses  
+- 📋 Smart **handoff form** for ticket creation and escalation  
+- 📊 Automatic **Google Sheets integration** — saves user inputs and chat data  
+- ⚙️ Modular components for chat UI (`ChatInput`, `MessageList`, `ChatWidget`, etc.)  
+- 🎨 Modern and responsive design using **Tailwind CSS**  
+- 🧠 Simple, extendable knowledge base for predefined FAQs  
 
-🧠 Knowledge base integration for instant answers
+---
 
-📱 Fully responsive and modern UI
+## 🛠️ Tech Stack
 
-⚡ Built with Vite for ultra-fast development
+| Technology | Purpose |
+|-------------|----------|
+| **React + TypeScript** | Frontend framework |
+| **Vite** | Fast development bundler |
+| **Tailwind CSS** | Styling |
+| **Google Sheets API** | Backend data storage |
+| **Node.js / npm** | Build & dependency management |
 
-🧩 Modular reusable components (ChatInput, ChatWidget, etc.)
+---
 
-📁 Project Structure
-FinanceAI-Chatbot/
+## 📂 Project Structure
+
+project/
 │
-├── project/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── ChatButton.tsx
-│   │   │   ├── ChatHeader.tsx
-│   │   │   ├── ChatInput.tsx
-│   │   │   ├── ChatWidget.tsx
-│   │   │   ├── HandoffForm.tsx
-│   │   │   ├── MessageBubble.tsx
-│   │   │   ├── MessageList.tsx
-│   │   │   ├── QuickActionCard.tsx
-│   │   │   └── TypingIndicator.tsx
-│   │   ├── data/
-│   │   │   └── knowledgeBase.ts
-│   │   ├── types/
-│   │   ├── App.tsx
-│   │   ├── index.css
-│   │   ├── main.tsx
-│   │   └── vite-env.d.ts
-│   ├── .env
-│   ├── package.json
-│   ├── tailwind.config.js
-│   ├── tsconfig.json
-│   └── README.md
+├── src/
+│ ├── components/
+│ │ ├── ChatButton.tsx
+│ │ ├── ChatHeader.tsx
+│ │ ├── ChatInput.tsx
+│ │ ├── ChatWidget.tsx
+│ │ ├── HandoffForm.tsx
+│ │ ├── MessageBubble.tsx
+│ │ ├── MessageList.tsx
+│ │ ├── QuickActionCard.tsx
+│ │ └── TypingIndicator.tsx
+│ ├── data/
+│ │ └── knowledgeBase.ts
+│ ├── types/
+│ ├── App.tsx
+│ ├── main.tsx
+│ ├── index.css
+│ └── vite-env.d.ts
 │
-└── screenshots/     ← (Add your screenshots here)
-    ├── home.png
-    ├── chat.png
-    ├── ai_reply.png
-    ├── handoff_form.png
-    └── ticket_confirmation.png
-    
+├── screenshots/
+│ ├── home.png
+│ ├── chat.png
+│ ├── ai_reply.png
+│ ├── handoff_form.png
+│ ├── ticket_confirmation.png
+│ └── google_sheet.png
+│
+├── .env
+├── package.json
+├── tailwind.config.js
+└── vite.config.ts
 
-⚙️ Installation and Setup
 
-Make sure you have Node.js (v16+) and npm installed.
+---
 
-1️⃣ Clone the Repository
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repository
+
+```bash
 git clone https://github.com/Hanna2002-jpg/FinanceAI-Chatbot.git
 cd FinanceAI-Chatbot/project
 
-2️⃣ Install Dependencies
+2️⃣ Install dependencies
 npm install
 
-3️⃣ Run the Development Server
+3️⃣ Run the development server
 npm run dev
 
 
-Then open your browser at 👉 http://localhost:5173/
+Then open the local server URL shown in your terminal (usually http://localhost:5173).
 
-🌐 Deployment
+🔗 Google Sheets Integration
 
-You can deploy this chatbot easily using:
+This chatbot uses Google Sheets as a backend log for form submissions and chat history.
 
-🔹 Vercel
- – One-click deployment
+Steps:
 
-🔹 Netlify
- – Drag-and-drop build folder
+Create a Google Sheet and copy its ID from the URL:
 
-🔹 GitHub Pages
- – With vite-plugin-gh-pages
+https://docs.google.com/spreadsheets/d/<YOUR_SHEET_ID>/edit
 
-To build your project before deployment:
 
-npm run build
+Add the Sheet ID inside your integration script or .env file like this:
 
-🧠 Tech Stack
-Layer	Technology
-Frontend Framework	React (TypeScript)
-Styling	Tailwind CSS
-Build Tool	Vite
-Backend	Google Apps Script (for spreadsheet data)
-Data Storage	Google Sheets
-API	REST (doPost via Apps Script)
+VITE_GOOGLE_SHEET_ID=YOUR_SHEET_ID
+
+
+Make sure the Google Apps Script linked to your Sheet has permissions to receive and log data via a web app URL.
+
 🖼️ Screenshots
-
-Place all screenshots in a folder named screenshots/ inside your root directory.
-
-Home Page	Chat Window	AI Reply	Handoff Form	Ticket Confirmation Google sheet integration
+Home	Chat	AI Reply
 
 	
 	
+Handoff Form	Ticket Confirmation	Google Sheet Log
+
 	
 	
+🧩 Future Enhancements
 
+🔐 Authentication for user-based logs
 
-🤝 Contributing
+🤖 Integration with real AI APIs (OpenAI, Gemini, etc.)
 
-We welcome contributions to improve FinanceAI Chatbot!
+📱 Deployable version for mobile and desktop
 
-Fork this repository
+🤝 Contribution
 
-Create your feature branch
+Pull requests are welcome!
+For major changes, please open an issue first to discuss what you’d like to modify.
 
-git checkout -b feature/awesome-feature
-
-
-Commit your changes
-
-git commit -m "Add new feature"
-
-
-Push to your branch
-
-git push origin feature/awesome-feature
-
-
-Open a Pull Request 🎉
-
-🧾 License
+🪪 License
 
 This project is licensed under the MIT License.
-Feel free to modify, distribute, and use it for educational or commercial purposes.
-
-💡 Author
-
-👩‍💻 Hanna Ansar Koloth
-📍 Project: FinanceAI Chatbot
-🌐 GitHub: Hanna2002-jpg
+Feel free to use and modify it for your own projects.
