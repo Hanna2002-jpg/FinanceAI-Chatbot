@@ -107,22 +107,23 @@ Make sure the Google Apps Script linked to your Sheet has permissions to receive
 ## 🖼️ Screenshots
 
 ### 🏠 Home
-![Home](./screenshots/home.png)
+![Home](screenshots/home.png)
 
 ### 💬 Chat Interface
-![Chat](./screenshots/chat.png)
+![Chat](screenshots/chat.png)
 
 ### 🤖 AI Reply
-![AI Reply](./screenshots/ai_reply.png)
+![AI Reply](screenshots/ai_reply.png)
 
-### 📝 Handoff Form
-![Handoff Form](./screenshots/handoff_form.png)
+### 📄 Handoff Form
+![Handoff Form](screenshots/handoff_form.png)
 
 ### 🎟️ Ticket Confirmation
-![Ticket Confirmation](./screenshots/ticket_confirmation.png)
+![Ticket Confirmation](screenshots/ticket_confirmation.png)
 
 ### 📊 Google Sheet Integration
-![Google Sheet](./screenshots/google_sheet.png)
+![Google Sheet](screenshots/google_sheet.png)
+
 
 
 	
